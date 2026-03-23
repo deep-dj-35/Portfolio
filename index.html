@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Jana | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #3b88a9, #25434e, #214352);
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            opacity: 0.8;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: rgba(224, 236, 68, 0.05);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #17aedc;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Deep Jana</h1>
+        <p>B.Pharm Student | Web Developer</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Profile Section -->
+        <div class="card profile">
+            <h2>My Profile</h2>
+            <img id="profilePic" src="pfp.jpeg" alt="Profile Picture">
+            
+        </div>
+
+        <!-- About Section -->
+        <div class="card">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am Deep Jana, a B.Pharm student with a strong passion for web development.
+                 I enjoy designing and building modern, responsive, and professional websites.
+                  I am constantly learning new technologies and improving my skills to create user-friendly, visually appealing,
+                   and efficient web experiences.
+            </p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="card skills">
+            <h2>Skills</h2>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="card">
+            <h2>Projects</h2>
+            <p>✔ Portfolio Website</p>
+            <p>✔ Blog Website</p>
+            <p>✔ Landing Pages</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="card">
+            <h2>Contact</h2>
+            <p>Email: deepjana293@.com</p>
+            <p>Phone: 9474141917</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Deep Jana | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Image Upload Preview
+        const upload = document.getElementById('upload');
+        const profilePic = document.getElementById('profilePic');
+
+        upload.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    profilePic.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
